@@ -9,6 +9,7 @@
 <script>
 import HeroView from '@/views/HeroView.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
+import { v4 as uuidv4 } from 'uuid';
 
 export default {
   components: {HeroView, FooterComponent}

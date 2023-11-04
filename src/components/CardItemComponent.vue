@@ -2,7 +2,7 @@
   <div :class="classItem">
     <img :src="require(`@/assets/img/${image}`)" :alt="image" />
     <div class="best__item-title">{{name}}</div>
-    <div class="best__item-price">{{price}}</div>
+    <div class="best__item-price">{{price}}$</div>
   </div>
 </template>
 
