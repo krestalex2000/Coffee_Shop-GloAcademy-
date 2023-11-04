@@ -7,7 +7,7 @@
             <nav-bar-component />
           </div>
         </div>
-        <h1 class="title-big">Our Coffee</h1>
+        <header-title-component :text="pageTitle"/>
       </div>
     </div>
     <section class="shop">
@@ -69,12 +69,42 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <card-item-component />
-              <card-item-component />
-              <card-item-component />
-              <card-item-component />
-              <card-item-component />
-              <card-item-component />
+              <card-item-component
+                classItem="shop__item"
+                :name="coffee[0].name"
+                :price="coffee[0].price"
+                :image="coffee[0].image"
+              />
+              <card-item-component
+                classItem="shop__item"
+                :name="coffee[1].name"
+                :price="coffee[1].price"
+                :image="coffee[1].image"
+              />
+              <card-item-component
+                classItem="shop__item"
+                :name="coffee[2].name"
+                :price="coffee[2].price"
+                :image="coffee[2].image"
+              />
+              <card-item-component
+                classItem="shop__item"
+                :name="coffee[3].name"
+                :price="coffee[3].price"
+                :image="coffee[3].image"
+              />
+              <card-item-component
+                classItem="shop__item"
+                :name="coffee[4].name"
+                :price="coffee[4].price"
+                :image="coffee[4].image"
+              />
+              <card-item-component
+                classItem="shop__item"
+                :name="coffee[5].name"
+                :price="coffee[5].price"
+                :image="coffee[5].image"
+              />
             </div>
           </div>
         </div>
@@ -86,54 +116,58 @@
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import CardItemComponent from "@/components/CardItemComponent.vue";
+import HeaderTitleComponent from '@/components/HeaderTitleComponent.vue';
 
 export default {
   data() {
-    return [
-      {
-        id: 0,
-        icon: "good-1.jpg",
-        title: "Solimo Coffee Beans 2kg",
-        item_country: 'Brazil',
-        price: "10.73$",
-      },
-      {
-        id: 1,
-        icon: "good-1.jpg",
-        title: "Solimo Coffee Beans 2kg",
-        item_country: 'Brazil',
-        price: "10.73$",
-      },
-      {
-        id: 2,
-        icon: "good-1.jpg",
-        title: "Solimo Coffee Beans 2kg",
-        item_country: 'Brazil',
-        price: "10.73$",
-      },
-      {
-        id: 3,
-        icon: "good-1.jpg",
-        title: "Solimo Coffee Beans 2kg",
-        item_country: 'Brazil',
-        price: "10.73$",
-      },
-      {
-        id: 4,
-        icon: "good-1.jpg",
-        title: "Solimo Coffee Beans 2kg",
-        item_country: 'Brazil',
-        price: "10.73$",
-      },
-      {
-        id: 5,
-        icon: "good-1.jpg",
-        title: "Solimo Coffee Beans 2kg",
-        item_country: 'Brazil',
-        price: "10.73$",
-      },
-    ];
+    return {
+      pageTitle: "Our Coffee",
+      coffee: [
+        {
+          id: 0,
+          image: "good-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
+          item_country: "Brazil",
+          price: "10.73$",
+        },
+        {
+          id: 1,
+          image: "good-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
+          item_country: "Brazil",
+          price: "10.73$",
+        },
+        {
+          id: 2,
+          image: "good-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
+          item_country: "Brazil",
+          price: "10.73$",
+        },
+        {
+          id: 3,
+          image: "good-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
+          item_country: "Brazil",
+          price: "10.73$",
+        },
+        {
+          id: 4,
+          image: "good-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
+          item_country: "Brazil",
+          price: "10.73$",
+        },
+        {
+          id: 5,
+          image: "good-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
+          item_country: "Brazil",
+          price: "10.73$",
+        },
+      ],
+    };
   },
-  components: { NavBarComponent, CardItemComponent },
+  components: { NavBarComponent, CardItemComponent, HeaderTitleComponent },
 };
 </script>
