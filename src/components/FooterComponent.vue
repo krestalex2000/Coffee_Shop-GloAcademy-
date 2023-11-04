@@ -9,24 +9,21 @@
                 <img :src="require(`@/assets/logo/${links[0].icon}`)" alt="logo" />
               </router-link>
             </li>
-            <li class="footer__item">
-              <nav-link-component 
+            <nav-item-component 
+                classLink="footer__item"
                 :link="links[1].link" 
                 :text="links[1].text" 
               />
-            </li>
-            <li class="footer__item">
-              <nav-link-component 
+            <nav-item-component 
+                classLink="footer__item"
                 :link="links[2].link" 
                 :text="links[2].text" 
               />
-            </li>
-            <li class="footer__item">
-              <nav-link-component 
+            <nav-item-component 
+                classLink="footer__item"
                 :link="links[3].link" 
                 :text="links[3].text" 
               />
-            </li>
           </ul>
         </div>
       </div>
@@ -40,7 +37,7 @@
 </template>
 
 <script>
-import NavLinkComponent from "./NavLinkComponent.vue";
+import NavItemComponent from "./NavItemComponent.vue";
 
 export default {
   data() {
@@ -70,6 +67,6 @@ export default {
       ]
     }
   },
-  components: {NavLinkComponent}
+  components: {NavItemComponent}
 }
 </script>
