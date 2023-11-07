@@ -4,18 +4,14 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <ul class="footer d-flex flex-wrap">
-            <!-- <li class="footer__item">
-              <router-link :to="links[0].link">
-                <img :src="require(`@/assets/logo/${links[0].icon}`)" alt="logo" />
-              </router-link>
-            </li> -->
+            
             <nav-item-component
-              :link="links.header.link"
+              :link="links.footer.link"
               classLink="footer__item"
             >
               <img 
-                :src="require(`@/assets/logo/${links.header.icon}`)" 
-                :alt="links.header.icon" 
+                :src="require(`@/assets/logo/${links.footer.icon}`)" 
+                :alt="links.footer.icon" 
               />
             </nav-item-component>
 
@@ -45,7 +41,7 @@ export default {
   data() {
     return {
       links: {
-        header: {
+        footer: {
           id: 0,
           link: "/",
           icon: "Logo_black.svg",
