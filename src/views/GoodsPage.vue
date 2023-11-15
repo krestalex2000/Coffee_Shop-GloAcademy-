@@ -74,52 +74,13 @@ export default {
   data() {
     return {
       pageTitle: "For your pleasure",
-      goods: [
-        {
-          id: uuidv4(),
-          image: "good-1.jpg",
-          name: "Solimo Coffee Beans 2kg",
-          item_country: "Brazil",
-          price: 10.73,
-        },
-        {
-          id: uuidv4(),
-          image: "good-1.jpg",
-          name: "Solimo Coffee Beans 2kg",
-          item_country: "Brazil",
-          price: 10.73,
-        },
-        {
-          id: uuidv4(),
-          image: "good-1.jpg",
-          name: "Solimo Coffee Beans 2kg",
-          item_country: "Brazil",
-          price: 10.73,
-        },
-        {
-          id: uuidv4(),
-          image: "good-1.jpg",
-          name: "Solimo Coffee Beans 2kg",
-          item_country: "Brazil",
-          price: 10.73,
-        },
-        {
-          id: uuidv4(),
-          image: "good-1.jpg",
-          name: "Solimo Coffee Beans 2kg",
-          item_country: "Brazil",
-          price: 10.73,
-        },
-        {
-          id: uuidv4(),
-          image: "good-1.jpg",
-          name: "Solimo Coffee Beans 2kg",
-          item_country: "Brazil",
-          price: 10.73,
-        },
-      ],
     };
   },
   components: { NavBarComponent, CardItemComponent, HeaderTitleComponent },
+  computed: {
+    goods() {
+      return this.$store.getters["getCoffeeCards"]
+    }
+  }
 };
 </script>
